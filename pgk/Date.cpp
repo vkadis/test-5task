@@ -1,10 +1,12 @@
 //
 // Created by user on 07.12.2023.
 //
+
 #include <iostream>
 #include "Date.h"
 
-bool Date::operator< (const Date &other) const {
+bool Date::operator< (const Date &other) const
+{
     if (m_year != other.m_year)
     {
         return m_year < other.m_year;
@@ -27,8 +29,10 @@ std::string Date::Getstr() const
     std::string year , month , day;
     year = std::string(4 - std::to_string(m_year).length() , '0')
             + std::to_string(m_year);
+
     month = std::string(2 - std::to_string(m_month).length() , '0')
             + std::to_string(m_month);
+
     day = std::string(2 - std::to_string(m_day).length() , '0')
             + std::to_string(m_day);
     return year + "-" + month + "-" + day;

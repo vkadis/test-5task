@@ -2,7 +2,8 @@
 #include <sstream>
 #include "../pgk/DataBase.h"
 
-Date chekDate(std::istringstream &is){
+Date chekDate(std::istringstream &is)
+{
     std::string date;
     is >> date;
     std::istringstream dateStream(date);
@@ -11,7 +12,8 @@ Date chekDate(std::istringstream &is){
 
     if (!(dateStream >> year >> dash >> month >> dash >> day) || (dateStream >> dash))
         throw std::logic_error("Wrong date format: " + date);
-    else {
+    else
+    {
         if (month < 1 || month > 12) {
             throw std::logic_error("Month value is invalid: " +
                                    std::to_string(month));

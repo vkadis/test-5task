@@ -8,11 +8,7 @@
 
 void DataBase::AddEvent(const Date& date, const std::string &str)
 {
-    if (m_container.find(date) == m_container.end() ||
-        m_container[date].find(str) == m_container[date].end())
-    {
-        m_container[date].insert(str);
-    }
+    m_container[date].insert(str);
 }
 
 void DataBase::Print() const

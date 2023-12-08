@@ -6,14 +6,13 @@
 #define PROJC___DATE_H
 
 
-class Date {
+class Date
+{
 public:
     Date(int year, int month, int day): m_year(year), m_month(month) ,m_day(day){}
     bool operator< (const Date& other) const;
     bool operator== (const Date& other) const;
     std::string Getstr() const;
-
-
 private:
     const int m_year;
     const int m_month;
